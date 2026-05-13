@@ -1,6 +1,6 @@
 
 # modules/main.py
-
+from pyrogram import Client, filters
 import globals
 from html_handler import html_handler
 from drm_handler import drm_handler
@@ -11,7 +11,7 @@ from commands import register_commands_handlers
 from settings import register_settings_handlers
 from broadcast import broadcast_handler, broadusers_handler
 from authorisation import add_auth_user, list_auth_users, remove_auth_user
-
+from pyrogram.types import Message
 from youtube_handler import (
     ytm_handler,
     y2t_handler,
