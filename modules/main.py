@@ -1,4 +1,5 @@
-# ONLY replace these imports in modules/main.py
+
+# modules/main.py
 
 import globals
 from html_handler import html_handler
