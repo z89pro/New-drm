@@ -1,4 +1,6 @@
+import os
 import requests
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 # modules/main.py
 from pyrogram import Client, filters
 import globals
