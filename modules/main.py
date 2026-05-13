@@ -8,24 +8,53 @@ import asyncio
 import requests
 import subprocess
 import random
+
 from pyromod import listen
 from pyrogram import Client, filters
 from pyrogram.errors.exceptions.bad_request_400 import StickerEmojiInvalid
-from pyrogram.types.messages_and_media import message
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, InputMediaPhoto
-# .....,.....,.......,...,.......,....., .....,.....,.......,...,.......,.....,
-import globals
-from html_handler import html_handler
-from drm_handler import drm_handler
-from text_handler import text_to_txt
-from features import register_feature_handlers
-from upgrade import register_upgrade_handlers
-from commands import register_commands_handlers
-from settings import register_settings_handlers
-from broadcast import broadcast_handler, broadusers_handler
-from authorisation import add_auth_user, list_auth_users, remove_auth_user
-from youtube_handler import ytm_handler, y2t_handler, getcookies_handler, cookies_handler
-from vars import API_ID, API_HASH, BOT_TOKEN, OWNER, CREDIT, AUTH_USERS, TOTAL_USERS, cookies_file_path
+from pyrogram.types import (
+    InlineKeyboardButton,
+    InlineKeyboardMarkup,
+    Message,
+    InputMediaPhoto
+)
+
+from modules import globals
+from modules.html_handler import html_handler
+from modules.drm_handler import drm_handler
+from modules.text_handler import text_to_txt
+from modules.features import register_feature_handlers
+from modules.upgrade import register_upgrade_handlers
+from modules.commands import register_commands_handlers
+from modules.settings import register_settings_handlers
+from modules.broadcast import (
+    broadcast_handler,
+    broadusers_handler
+)
+
+from modules.authorisation import (
+    add_auth_user,
+    list_auth_users,
+    remove_auth_user
+)
+
+from modules.youtube_handler import (
+    ytm_handler,
+    y2t_handler,
+    getcookies_handler,
+    cookies_handler
+)
+
+from modules.vars import (
+    API_ID,
+    API_HASH,
+    BOT_TOKEN,
+    OWNER,
+    CREDIT,
+    AUTH_USERS,
+    TOTAL_USERS,
+    cookies_file_path
+)
 # .....,.....,.......,...,.......,....., .....,.....,.......,...,.......,.....,
 
 # Initialize the bot
