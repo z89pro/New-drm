@@ -2,7 +2,12 @@ import os
 import sys
 import asyncio
 import requests
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import (
+    InlineKeyboardMarkup,
+    InlineKeyboardButton,
+    InputMediaPhoto,
+    Message
+)
 # modules/main.py
 from pyrogram import Client, filters
 import globals
