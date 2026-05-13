@@ -1,4 +1,4 @@
-9import os
+import os
 import asyncio
 import requests
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
@@ -305,9 +305,5 @@ def reset_and_set_commands():
     requests.post(url, json={"commands": commands})
     
 if __name__ == "__main__":
-   # reset_and_set_commands()
-    notify_owner() 
-
-print("Bot Started")
-
-bot.run()
+    print("Bot Started")
+    bot.run()
