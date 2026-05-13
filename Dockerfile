@@ -18,5 +18,4 @@ RUN pip install --upgrade pip setuptools wheel
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
-
-CMD cd modules && python3 main.py
+CMD gunicorn --bind 0.0.0.0:8000 app:app & cd modules && python3 main.py
