@@ -1,4 +1,4 @@
-
+import requests
 # modules/main.py
 from pyrogram import Client, filters
 import globals
