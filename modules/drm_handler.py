@@ -1,83 +1,34 @@
+# modules/drm_handler.py
 
-# .....,.....import os
-import re
-import sys
-import m3u8
-import json
-import time
-import pytz
-import asyncio
-import requests
-import subprocess
-import urllib
-import urllib.parse
-import yt_dlp
-import tgcrypto
-import cloudscraper
-import random
-import aiohttp
-import aiofiles
-import zipfile
-import shutil
-import ffmpeg
+from logs import logging
 
-from Crypto.Cipher import AES
-from Crypto.Util.Padding import unpad
-from base64 import b64encode, b64decode
+import saini as helper
+import html_handler
+import globals
 
-from bs4 import BeautifulSoup
-from aiohttp import ClientSession, web
-from subprocess import getstatusoutput
-from pytube import YouTube
-
-from pyromod import listen
-from pyrogram import Client, filters
-from pyrogram.errors import (
-    FloodWait,
-    PeerIdInvalid,
-    UserIsBlocked,
-    InputUserDeactivated
-)
-
-from pyrogram.errors.exceptions.bad_request_400 import (
-    StickerEmojiInvalid
-)
-
-from pyrogram.types import (
-    InlineKeyboardButton,
-    InlineKeyboardMarkup,
-    Message,
-    InputMediaPhoto
-)
-
-from modules.logs import logging
-from modules import saini as helper
-from modules import html_handler
-from modules import globals
-
-from modules.authorisation import (
+from authorisation import (
     add_auth_user,
     list_auth_users,
     remove_auth_user
 )
 
-from modules.broadcast import (
+from broadcast import (
     broadcast_handler,
     broadusers_handler
 )
 
-from modules.text_handler import text_to_txt
+from text_handler import text_to_txt
 
-from modules.youtube_handler import (
+from youtube_handler import (
     ytm_handler,
     y2t_handler,
     getcookies_handler,
     cookies_handler
 )
 
-from modules.utils import progress_bar
+from utils import progress_bar
 
-from modules.vars import (
+from vars import (
     API_ID,
     API_HASH,
     BOT_TOKEN,
@@ -89,7 +40,7 @@ from modules.vars import (
     api_url,
     api_token
 )
-#.......,...,.......,....., .....,.....,.......,...,.......,.....,
+
 
 
 async def drm_handler(bot: Client, m: Message):
