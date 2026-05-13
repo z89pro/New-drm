@@ -1,5 +1,6 @@
 # modules/drm_handler.py
-
+from pyrogram import Client
+from pyrogram.types import Message
 from logs import logging
 
 import saini as helper
