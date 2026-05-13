@@ -1,4 +1,6 @@
-# modules/drm_handler.py
+8# modules/drm_handler.py
+import os
+import asyncio
 from pyrogram import Client
 from pyrogram.types import Message
 from logs import logging
