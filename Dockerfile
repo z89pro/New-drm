@@ -19,4 +19,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD gunicorn app:app & cd modules && python3 main.py
+CMD cd modules && python3 main.py
