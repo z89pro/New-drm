@@ -1,4 +1,5 @@
 import os
+import asyncio
 import requests
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 # modules/main.py
